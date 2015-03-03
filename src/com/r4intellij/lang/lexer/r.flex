@@ -124,6 +124,7 @@ YYINITIAL. */
   "break" { return R_BREAK; }
   "next" { return R_NEXT; }
   "repeat" { return R_REPEAT; }
+  "%in%" { return R_PINP; }
   "in" { return R_IN; }
   "NULL" { return R_NULL_CONST; }
   "..." { return R_SYMBOL_FORMALS; }
@@ -169,7 +170,7 @@ YYINITIAL. */
   "/" { return R_ARITH_DIV; }
   "^" { return R_ARITH_EXPONENTIAION; }
   "%%" { return R_ARITH_MOD; }
-  "%/%" | "%*%" | "%o%" | "%x%" | "%+%" | "%>%" | "%<>%" | "%$%" | "%T>%" | %in% { return R_ARITH_MISC; }
+  "%/%" | "%*%" | "%o%" | "%x%" | "%+%" | "%>%" | "%<>%" | "%$%" | "%T>%" { return R_ARITH_MISC; }
 
   // misc
   "=" { return R_EQ_ASSIGN; }

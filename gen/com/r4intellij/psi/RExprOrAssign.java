@@ -7,15 +7,15 @@
 package com.r4intellij.psi;
 
 import java.util.List;
+
 import org.jetbrains.annotations.*;
 import com.intellij.psi.PsiElement;
 
-public interface RExprOrAssign extends RCompositeElement {
+public interface RExprOrAssign extends RCompositeElement
+{
 
-  @Nullable
-  RExpr getExpr();
+	@NotNull RExpr getExpr();
 
-  @Nullable
-  RExprOrAssign getExprOrAssign();
+	@Nullable RExprOrAssign getExprOrAssign();
 
 }

@@ -77,7 +77,7 @@ public interface RTypes
 	IElementType R_NUM_CONST = new RTokenType( "NUM_CONST" );
 	IElementType R_OR = new RTokenType( "|" );
 	IElementType R_OR2 = new RTokenType( "||" );
-	IElementType R_PIPE = new RTokenType( "%>%" );
+	IElementType R_PINP = new RTokenType( "PINP" );
 	IElementType R_QUESTION = new RTokenType( "?" );
 	IElementType R_RBB = new RTokenType( "]]" );
 	IElementType R_REPEAT = new RTokenType( "REPEAT" );
