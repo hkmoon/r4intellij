@@ -122,6 +122,7 @@ section ::= SECTION_COMMENT {extends="com.r4intellij.psi.impl.AbstractRSection"}
 expr ::= (
     NUM_CONST |
     NULL_CONST |
+    SYMBOL_FORMALS |
     string_literal | // todo remove this as it is redundant with the last line optionalized with ()?
     funcall |
     variable (NS_GET SYMBOL | NS_GET STR_CONST | NS_GET_INT SYMBOL | NS_GET_INT STR_CONST)? |
