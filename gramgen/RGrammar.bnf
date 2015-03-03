@@ -111,14 +111,14 @@ external grammar ::= document
 // Done: match an empty file
 document ::= command*
 
-command ::= (section |  expr_or_assign ';'? | EOL)
+command ::= (section |  expr_or_assign ';'?)
 
-expr_or_assign ::= EOL* ( expr [EQ_ASSIGN expr_or_assign] |  COMMENT )
+expr_or_assign ::= EOL* ( expr [EQ_ASSIGN expr_or_assign]  | COMMENT )
 
 section ::= SECTION_COMMENT {extends="com.r4intellij.psi.impl.AbstractRSection"}
 
 
-expr ::= (
+expr ::= ( EOL |
     NUM_CONST |
     NULL_CONST |
     string_literal | // todo remove this as it is redundant with the last line optionalized with ()?
